@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx run assistant:build",
+    "build": "nx run assistant:build --prod",
     "serve": "nx run assistant:serve"
   },
   "private": true,

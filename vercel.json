@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run serve",
+  "buildCommand": "npx nx build assistant --prod",
+  "devCommand": "npx nx serve assistant --prod",
   "installCommand": "npm install",
-  "framework": null,
-  "outputDirectory": "./static/apps/assistant"
+  "framework": "nextjs",
+  "outputDirectory": "./dist/apps/assistant/.next"
 }

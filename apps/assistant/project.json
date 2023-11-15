@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "static/apps/assistant"
+        "outputPath": "dist/apps/assistant"
       },
       "configurations": {
         "development": {
