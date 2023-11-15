@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-ai-assistant/create-assistant": [
+        "libs/create-assistant/src/index.ts"
+      ],
       "@nx-ai-assistant/utils": ["libs/utils/src/index.ts"]
     }
   },

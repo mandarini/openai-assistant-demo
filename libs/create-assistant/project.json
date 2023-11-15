@@ -1,0 +1,52 @@
+{
+  "name": "create-assistant",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/create-assistant/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/create-assistant",
+        "main": "libs/create-assistant/src/index.ts",
+        "tsConfig": "libs/create-assistant/tsconfig.lib.json",
+        "assets": ["libs/create-assistant/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/create-assistant/**/*.ts",
+          "libs/create-assistant/package.json"
+        ]
+      }
+    },
+    "run-node": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "create-assistant:build",
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "create-assistant:build:development"
+        },
+        "production": {
+          "buildTarget": "create-assistant:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/create-assistant/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
