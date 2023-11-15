@@ -2,7 +2,10 @@
   "name": "@nx-ai-assistant/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run assistant:build",
+    "serve": "nx run assistant:serve"
+  },
   "private": true,
   "dependencies": {
     "next": "13.4.1",

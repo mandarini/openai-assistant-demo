@@ -57,15 +57,17 @@ export default function Index() {
   return (
     <div className="chat-container">
       <div className="message-display-area">
+        {isLoading && <div className="loader"></div>}{' '}
         {data.messages.map((message, index) => (
           <div key={index} className="message">
             <div className={`${message.role}`}>
-              <p>{message.role}:</p>
+              <p>
+                <b>{message.role}:</b>
+              </p>
               <p>{(message.content as MessageContentText[])?.[0].text.value}</p>
             </div>
           </div>
         ))}
-        {isLoading && <div className="loader"></div>}{' '}
       </div>
       <form className="message-input-form" onSubmit={handleSubmit}>
         <input

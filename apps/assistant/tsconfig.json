@@ -16,7 +16,10 @@
         "name": "next"
       }
     ],
-    "types": ["jest", "node"]
+    "types": [
+      "jest",
+      "node"
+    ]
   },
   "include": [
     "**/*.ts",
@@ -25,7 +28,8 @@
     "**/*.jsx",
     "../../apps/assistant/.next/types/**/*.ts",
     "../../dist/apps/assistant/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "../../static/apps/assistant/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

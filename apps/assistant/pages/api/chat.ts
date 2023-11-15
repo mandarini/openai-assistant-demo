@@ -19,7 +19,6 @@ export default async function handler(request: NextRequest) {
     const openai = getOpenAI(openAiKey);
 
     const { userQuery } = (await request.json()) as { userQuery: string };
-    console.log('userQuery: ', userQuery);
     const thread = await getThread(openai);
 
     await openai.beta.threads.messages.create(thread.id, {
