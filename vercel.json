@@ -4,5 +4,10 @@
   "devCommand": "npx nx serve assistant --prod",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "outputDirectory": "./dist/apps/assistant/.next"
+  "outputDirectory": "./dist/apps/assistant/.next",
+  "functions": {
+    "pages/api/**": {
+      "maxDuration": 120
+    }
+  }
 }
